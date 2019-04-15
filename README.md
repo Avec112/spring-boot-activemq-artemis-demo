@@ -69,14 +69,14 @@ See [documentation](https://github.com/vromero/activemq-artemis-docker) for furt
 :information_source: You can verify that Artemis is up by accessing the url http://localhost:8161 (admin/admin)
 
 #### Start Producer application :outbox_tray:
-Open the Producer terminal and start Producer application.   
+Open Producer terminal and start Producer application.   
 Messages will be produced and the application will then terminate.  
-**Watch the consumer shell for messages when running this command!**
+**Watch the consumer terminal for messages when running this command!**
 ```
 > cd spring-boot-activemq-artemis-demo/producer
 > mvn spring-boot:run
 ```
-Or you can start the application like this.
+**Or you can start the application like this.**
 
 But first package jar with dependencies.  
 ```          
@@ -101,7 +101,7 @@ Produced 1000 messages.
 Finished creating messages.
 ```
 #### Start Consumer application :inbox_tray:
-Go to Consumer terminal and start the Consumer application.   
+Open Consumer terminal and start the Consumer application.   
 It will start listening for new messages. 
 ```
 > cd ./spring-boot-activemq-artemis-demo/consumer
