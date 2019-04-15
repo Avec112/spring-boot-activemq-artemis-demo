@@ -8,6 +8,7 @@
   * [Prerequisites](#prerequisites)
   * [Installation](#installation)
 * [Usage](#usage)
+* [Clean up](#clean-up)
 
 
 
