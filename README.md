@@ -10,7 +10,7 @@
   * [Prerequisites](#prerequisites)
   * [Installation](#installation)
 * [Usage](#usage)
-* [Clean up](#clean-up)
+* [Clean up](#clean-up-put_litter_in_its_place)
 
 
 
@@ -37,7 +37,7 @@ Windows users probably know their own way around so I will not go into any detai
 
 ### Installation
 
-You will need two separate terminals to run both applications.
+You might want to use two separate terminals to run both applications.
 
 Now start the first terminal.
 
@@ -68,7 +68,7 @@ See [documentation](https://github.com/vromero/activemq-artemis-docker) for furt
 
 :information_source: You can verify that Artemis is up by accessing the url http://localhost:8161 (admin/admin)
 
-#### Start Producer application
+#### Start Producer application :outbox_tray:
 Open the Producer terminal and start Producer application.   
 Messages will be produced and the application will then terminate.  
 **Watch the consumer shell for messages when running this command!**
@@ -100,7 +100,7 @@ Produced 900 messages.
 Produced 1000 messages.
 Finished creating messages.
 ```
-#### Start Consumer application
+#### Start Consumer application :inbox_tray:
 Go to Consumer terminal and start the Consumer application.   
 It will start listening for new messages. 
 ```
