@@ -1,4 +1,4 @@
-# Spring Boot and Apache ActiveMQ Artemis
+# Spring Boot and Apache ActiveMQ Artemis demo
 [//]: # (logo here)
 
 ## Table of Contents
@@ -14,47 +14,35 @@
 
 
 ## About the project
-This demo shows how a Spring Boot producer and consumer integrates with Apache ActiveMQ Artemis.  
-
-The purpose of this demo is to show how you can setup Spring Boot by creating two separate micro services and communicate asynchronously via a message broker.
+This demo shows how two [Spring Boot](https://spring.io/projects/spring-boot) applications produce and consumes messages 
+with [Apache ActiveMQ Artemis](http://activemq.apache.org/components/artemis/) message broker.  
 
 ### Built with
 * Spring Boot v2.1.4
 
 ## Getting started
+I have a MacBook Pro and will recommend any Unix-type OS for this exercise.
+I also recommend using [sdkman](https://sdkman.io) for easy install and switching between different Java and Maven versions.
+
+Windows users probably know their own way around so I will not go into any details for windows installation.
+
 ### Prerequisites
-* Docker (I used Docker Desktop 2.0.0.3 on a MacBook Pro)
-* Java 11 (I am using [sdkman.io](https://sdkman.io) for easy install and switching between different Java versions)
-* Maven. I used v3.6.1 (Same as for Java. I use [sdkman.io](https://sdkman.io))
 * Git
+* Java 8+
+* Maven 3.2+
+* Docker
+
 
 ### Installation
 
-You will need two separate terminals (shells/prompts).
+You will need two separate terminals to run both applications.
 
+Now start the first terminal.
 
 #### Clone this repo
+Go to your projects directory and clone the project.
 ```
-git clone xxx
-```
-
-#### Build Consumer-app
-In the same terminal build Consumer application. We will call this the Consumer terminal.
-```
-> cd ./spring-boot-activemq-artemis-demo/consumer
-> mvn clean install
-```
-
-#### Build Production-app
-In a separate terminal build Producer application. We will call this the Producer terminal.
-```
-> cd ./spring-boot-activemq-artemis-demo/producer
-> mvn clean install
-```
-Start producer application. Messages will be produced and application close down.  
-__Watch the consumer shell for messages when running this command!__
-```
-> mvn spring-boot:run
+git clone https://github.com/Avec112/spring-boot-activemq-artemis-demo.git
 ```
 
 ## Usage
@@ -81,8 +69,9 @@ You can verify that Artemis is up by accessing the url http://localhost:8161 (ad
 #### Start Producer application
 Open the Producer terminal and start Producer application.   
 Messages will be produced and the application will then terminate.  
-__Watch the consumer shell for messages when running this command!__
+**Watch the consumer shell for messages when running this command!**
 ```
+> cd ./spring-boot-activemq-artemis-demo/producer
 > mvn spring-boot:run
 ```
 Or you can start the application like this.
@@ -113,9 +102,10 @@ Finished creating messages.
 Go to Consumer terminal and start the Consumer application.   
 It will start listening for new messages. 
 ```
-mvn spring-boot:run
+> cd ./spring-boot-activemq-artemis-demo/consumer
+> mvn spring-boot:run
 ```
-Or you can start the application like this.  
+*Or you can start the application like this.*  
 
 But first package jar with dependencies.
 ```
