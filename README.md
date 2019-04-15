@@ -29,7 +29,7 @@ I also recommend using [sdkman](https://sdkman.io) for easy install and switchin
 Windows users probably know their own way around so I will not go into any details for windows installation.
 
 ### Prerequisites
-* Git
+* Git :octocat:
 * Java 8+
 * Maven 3.2+
 * Docker
@@ -41,7 +41,7 @@ You might want to use two separate terminals to run both applications.
 
 Now start the first terminal.
 
-#### Clone this repo :octocat:
+#### Clone this Git repo
 Go to your projects directory and clone the project.
 ```
 git clone https://github.com/Avec112/spring-boot-activemq-artemis-demo.git
@@ -55,7 +55,7 @@ git clone https://github.com/Avec112/spring-boot-activemq-artemis-demo.git
 
 ### Start docker container (Artemis)
 In either terminal, start the container containing Artemis.  
-We are running the container with in [detached](https://docs.docker.com/engine/reference/run/#detached--d) (-d) mode.  
+The container is run in [detached](https://docs.docker.com/engine/reference/run/#detached--d) (-d) mode.  
 ```
 > docker run -it --rm -d \
    -e ARTEMIS_USERNAME=admin \
