@@ -41,7 +41,7 @@ You will need two separate terminals to run both applications.
 
 Now start the first terminal.
 
-#### Clone this repo
+#### Clone this repo :octocat:
 Go to your projects directory and clone the project.
 ```
 git clone https://github.com/Avec112/spring-boot-activemq-artemis-demo.git
@@ -132,7 +132,7 @@ Listening for messages. CTRL + C to quit.
 1000 messages processed.
 ```
 
-## Clean up
+## Clean up :put_litter_in_its_place:
 ### Stop docker container (Artemis)
 List running containers to find the correct ID for Artemis.
 ```
