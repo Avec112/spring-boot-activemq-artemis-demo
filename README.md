@@ -1,4 +1,4 @@
-#Spring Boot and Apache ActiveMQ Artemis
+# Spring Boot and Apache ActiveMQ Artemis
 [//]: # (logo here)
 
 ## Table of Contents
@@ -12,22 +12,22 @@
 
 
 
-##About the project
+## About the project
 This demo shows how a Spring Boot producer and consumer integrates with Apache ActiveMQ Artemis.  
 
 The purpose of this demo is to show how you can setup Spring Boot by creating two separate micro services and communicate asynchronously via a message broker.
 
-###Built with
+### Built with
 * Spring Boot v2.1.4
 
-##Getting started
-###Prerequisites
+## Getting started
+### Prerequisites
 * Docker (I used Docker Desktop 2.0.0.3 on a MacBook Pro)
 * Java 11 (I am using [sdkman.io](https://sdkman.io) for easy install and switching between different Java versions)
 * Maven. I used v3.6.1 (Same as for Java. I use [sdkman.io](https://sdkman.io))
 * Git
 
-###Installation
+### Installation
 
 You will need two separate terminals (shells/prompts).
 
