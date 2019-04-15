@@ -13,31 +13,16 @@
     <version>0.1.0-SNAPSHOT</version>
     <name>spring-boot-activemq-artemis-demo</name>
     <description>Demo project for Spring Boot and ActiveMQ Artemis</description>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>producer</module>
+        <module>consumer</module>
+    </modules>
 
     <properties>
         <java.version>11</java.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
-
-    <dependencies>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-artemis</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
-        </dependency>
-    </dependencies>
-
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-        </plugins>
-    </build>
 
 </project>
