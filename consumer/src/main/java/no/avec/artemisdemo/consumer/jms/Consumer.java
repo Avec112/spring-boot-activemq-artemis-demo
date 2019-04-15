@@ -11,12 +11,18 @@ import org.springframework.stereotype.Component;
 @Component
 public class Consumer {
 
+    private int messageCounter = 0;
+
     @JmsListener(destination = "${jms.queue.destination}")
     public void receive(Message message){
         if(message.getPayload() instanceof String){
-            System.out.println("Recieved Message: " + message.getPayload().toString());
+//            System.out.println("Recieved Message: " + message.getPayload().toString());
+            messageCounter+=1;
+            if((messageCounter % 100)==0) { // print every 100
+                System.out.println(messageCounter + " messages processed.");
+            }
         } else {
-            System.err.println("Message Type Unkown !");
+            System.err.println("Message Type Unknown !");
         }
     }
 }

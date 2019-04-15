@@ -65,25 +65,18 @@ __Watch the consumer shell for messages when running this command!__
 
 ### Start docker container (Artemis)
 In either terminal, start the container containing Artemis.  
-We are running in detached (-d) mode.  
+We are running the container with in [detached](https://docs.docker.com/engine/reference/run/#detached--d) (-d) mode.  
 ```
 > docker run -it --rm -d \
+   -e ARTEMIS_USERNAME=admin \
+   -e ARTEMIS_PASSWORD=admin \
    -p 8161:8161 \
    -p 61616:61616 \
    vromero/activemq-artemis:latest-alpine
 ```
-Look [here](https://github.com/vromero/activemq-artemis-docker) for further documentation about the Apache ActiveMQ Artemis Docker container.
+See [documentation](https://github.com/vromero/activemq-artemis-docker) for further information about the Apache ActiveMQ Artemis Docker container configuration.
 
-#### Start Consumer application
-Go to Consumer terminal and start the Consumer application.   
-It will start listening for new messages. 
-```
-mvn spring-boot:run
-```
-Or you can start the application like this.
-```
-> java -jar ./target/consumer-0.1.0-SNAPSHOT.jar
-```
+You can verify that Artemis is up by accessing the url http://localhost:8161 (admin/admin)
 
 #### Start Producer application
 Open the Producer terminal and start Producer application.   
@@ -93,8 +86,58 @@ __Watch the consumer shell for messages when running this command!__
 > mvn spring-boot:run
 ```
 Or you can start the application like this.
+
+But first package jar with dependencies.  
+```          
+> mvn package
 ```
-> java -jar ./target/producer-0.1.0-SNAPSHOT.jar
+Then
+```
+> java -jar target/producer-0.1.0-SNAPSHOT.jar
+```
+The application will produce messages and print to output like this.
+```
+Produced 100 messages.
+Produced 200 messages.
+Produced 300 messages.
+Produced 400 messages.
+Produced 500 messages.
+Produced 600 messages.
+Produced 700 messages.
+Produced 800 messages.
+Produced 900 messages.
+Produced 1000 messages.
+Finished creating messages.
+```
+#### Start Consumer application
+Go to Consumer terminal and start the Consumer application.   
+It will start listening for new messages. 
+```
+mvn spring-boot:run
+```
+Or you can start the application like this.  
+
+But first package jar with dependencies.
+```
+> mvn package
+```
+Then
+```
+> java -jar target/consumer-0.1.0-SNAPSHOT.jar
+```
+The application will consume messages and print to output like this.
+```
+Listening for messages. CTRL + C to quit.
+100 messages processed.
+200 messages processed.
+300 messages processed.
+400 messages processed.
+500 messages processed.
+600 messages processed.
+700 messages processed.
+800 messages processed.
+900 messages processed.
+1000 messages processed.
 ```
 
 ## Clean up

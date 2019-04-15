@@ -33,9 +33,15 @@ public class ProducerApplication implements CommandLineRunner {
     public void run(String... args) throws Exception {
         Producer producer = ctx.getBean(Producer.class);
 
-        for(int i=1; i<=10;i++) {
+        int messageCount = 1000;
+
+        for(int i=1; i<=messageCount;i++) {
             producer.send("This is message #" + i);
+            if((i%100)==0) {
+                System.out.println("Produced " + i + " messages.");
+            }
         }
+        System.out.println("Finished creating messages.");
     }
 
 }
