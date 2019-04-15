@@ -66,7 +66,7 @@ We are running the container with in [detached](https://docs.docker.com/engine/r
 ```
 See [documentation](https://github.com/vromero/activemq-artemis-docker) for further information about the Apache ActiveMQ Artemis Docker container configuration.
 
-You can verify that Artemis is up by accessing the url http://localhost:8161 (admin/admin)
+:information_source: You can verify that Artemis is up by accessing the url http://localhost:8161 (admin/admin)
 
 #### Start Producer application
 Open the Producer terminal and start Producer application.   
