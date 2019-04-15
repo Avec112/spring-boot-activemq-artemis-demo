@@ -49,11 +49,11 @@ git clone https://github.com/Avec112/spring-boot-activemq-artemis-demo.git
 
 ## Usage
 
-* Start Artemis (docker container)
-* Start the Consumer application (consumed messages will be printed to stdout)
-* Start the Producer application (it will produce messages at startup)
+* Start the broker (Artemis)
+* Start the Consumer
+* Start the Producer
 
-### Start docker container (Artemis)
+### Start Artemis (docker container)
 In either terminal, start the container containing Artemis.  
 The container is run in [detached](https://docs.docker.com/engine/reference/run/#detached--d) (-d) mode.  
 ```
